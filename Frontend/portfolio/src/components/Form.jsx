@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { BorderBeam } from "@/components/ui/border-beam";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -36,7 +37,7 @@ export default function MyForm() {
 
   async function onSubmit(values) {
     try {
-      const res = await fetch("https://simple-elegent.onrender.com/", {
+      const res = await fetch(`${API_BASE_URL}/api/submit-form`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

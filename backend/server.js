@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
+      "http://localhost:5174",
       "https://www.prakashjha.com",
       "https://prakashjha.com",
     ],
@@ -27,7 +27,6 @@ app.use(
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("Connected to MongoDB");
   } catch (error) {
     console.error("MongoDB connection error:", error);
   }
