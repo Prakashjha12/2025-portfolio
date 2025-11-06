@@ -36,7 +36,7 @@ export default function MyForm() {
 
   async function onSubmit(values) {
     try {
-      const res = await fetch("http://localhost:8080/api/submit-form", {
+      const res = await fetch("https://simple-elegent.onrender.com/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

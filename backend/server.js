@@ -1,9 +1,11 @@
+import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 
 const app = express();
-const PORT = 8080;
+
+dotenv.config();
 
 // ✅ Enable JSON body parsing
 app.use(express.json());
@@ -11,21 +13,20 @@ app.use(express.json());
 // ✅ CORS setup (frontend → backend)
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://www.prakashjha.com",
+      "https://prakashjha.com",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
-// ✅ Test route
-app.get("/", (req, res) => {
-  res.send("✅ Backend is working fine!");
-});
-
 // ✅ Connect MongoDB
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/portfolio");
+    await mongoose.connect(process.env.MONGO_URI);
     console.log("Connected to MongoDB");
   } catch (error) {
     console.error("MongoDB connection error:", error);
@@ -64,5 +65,5 @@ app.post("/api/submit-form", async (req, res) => {
   }
 });
 // ✅ Start server
-
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
