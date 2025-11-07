@@ -35,22 +35,20 @@ Designed to highlight projects, skills, and experience with smooth animations an
 ---
 
 
-## 📂 Folder Structure
 2025-portfolio/
-│── public/
-│── src/
+├── public/
+├── src/
 │   ├── assets/
 │   ├── components/
 │   ├── scripts/
 │   └── styles/
-│── backend/
+├── backend/
 │   ├── api/
 │   ├── models/
-│   ├── .env (ignored, not pushed)
+│   ├── .env (ignored)
 │   └── server.js
-│── package.json
-│── README.md
-
+├── package.json
+└── README.md
 
 ---
 
