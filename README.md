@@ -32,25 +32,7 @@ Designed to highlight projects, skills, and experience with smooth animations an
 - MongoDB  
 - dotenv + CORS  
 
----
 
-
-2025-portfolio/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── scripts/
-│   └── styles/
-├── backend/
-│   ├── api/
-│   ├── models/
-│   ├── .env (ignored)
-│   └── server.js
-├── package.json
-└── README.md
-
----
 
 ## 🌐 Live Demo
 
