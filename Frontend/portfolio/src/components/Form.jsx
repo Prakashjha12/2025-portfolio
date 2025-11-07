@@ -18,6 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { PhoneInput } from "@/components/ui/phone-input";
 import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(1, { message: "Name is required." }),
@@ -26,6 +27,7 @@ const formSchema = z.object({
 });
 
 export default function MyForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -36,6 +38,10 @@ export default function MyForm() {
   });
 
   async function onSubmit(values) {
+    setIsSubmitting(true);
+    const toastId = toast.loading("Submitting...", {
+      position: "bottom-right",
+    });
     try {
       const res = await fetch(`${API_BASE_URL}/api/submit-form`, {
         method: "POST",
@@ -46,15 +52,25 @@ export default function MyForm() {
       });
 
       if (res.ok) {
-        toast.success("Form submitted successfully!");
+        toast.success("Form submitted successfully!", {
+          id: toastId,
+          position: "bottom-right",
+        });
         form.reset(); // reset form after submit
       } else {
-        toast.error("Failed to submit. Try again.");
+        toast.error("Failed to submit. Try again.", {
+          id: toastId,
+          position: "bottom-right",
+        });
       }
     } catch (error) {
       console.error("Form submission error", error);
-      toast.error("Something went wrong!");
+      toast.error("Something went wrong!", {
+        id: toastId,
+        position: "bottom-right",
+      });
     }
+    setIsSubmitting(false);
   }
   return (
     <div>
@@ -125,7 +141,9 @@ export default function MyForm() {
               </FormItem>
             )}
           />
-          <Button type="submit">Submit</Button>
+          <Button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Submitting..." : "Submit"}
+          </Button>
         </form>
       </Form>
     </div>

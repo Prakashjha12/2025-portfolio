@@ -12,6 +12,7 @@ import ClickSpark from "./components/ClickSpark";
 import Footer from "./components/Footer";
 import { FireworksBackground } from "./components/animate-ui/components/backgrounds/fireworks";
 import { SmoothCursor } from "./components/ui/smooth-cursor";
+import { Toaster } from "sonner";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -105,6 +106,7 @@ export const App = () => {
         <Cards />
         <Form />
         <Footer />
+        <Toaster position="bottom-right" />
       </ClickSpark>
     </div>
   );
