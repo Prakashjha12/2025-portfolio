@@ -32,6 +32,25 @@ Designed to highlight projects, skills, and experience with smooth animations an
 - MongoDB  
 - dotenv + CORS  
 
+---
+
+
+## 📂 Folder Structure
+2025-portfolio/
+│── public/
+│── src/
+│   ├── assets/
+│   ├── components/
+│   ├── scripts/
+│   └── styles/
+│── backend/
+│   ├── api/
+│   ├── models/
+│   ├── .env (ignored, not pushed)
+│   └── server.js
+│── package.json
+│── README.md
+
 
 ---
 
@@ -47,5 +66,3 @@ If you want to reach out or collaborate, feel free to connect with me:
 
 - **Email:** hello@prakashjha.com  
 ---
-
-## 📂 Folder Structure
