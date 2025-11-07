@@ -2,10 +2,9 @@ import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
+dotenv.config();
 
 const app = express();
-
-dotenv.config();
 
 // ✅ Enable JSON body parsing
 app.use(express.json());
@@ -26,7 +25,7 @@ app.use(
 // ✅ Connect MongoDB
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(process.env.MONGO_URL);
   } catch (error) {
     console.error("MongoDB connection error:", error);
   }
