@@ -40,7 +40,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div>
+    <div id="home">
       <div className="main min-h-[95vh]  flex flex-col gap-5 ml-10 items-center justify-center ">
         <div id="green-dot" className="flex items-center gap-2 ">
           <div

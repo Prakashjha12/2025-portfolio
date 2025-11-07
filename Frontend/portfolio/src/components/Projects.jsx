@@ -147,17 +147,14 @@ const Projects = () => {
                 <p className="text-white text-2xl text-center">
                   Play song according to your mood
                 </p>
-                <img
-                  src="/public/assets/image 1 mood detector.png"
-                  alt="image 1"
-                />
+                <img src="/assets/image 1 mood detector.png" alt="image 1" />
               </Card>
               <Card>
                 <h3 className="text-white p-7 ">MKBHD E-commerce Website</h3>
                 <p className=" text-white text-2xl text-center">
                   For a hackthone I built a MKBHD(Youtuber) Merchandise Website
                 </p>
-                <img src="/public/assets/MKBHD.png" alt="image 2" />
+                <img src="/assets/MKBHD.png" alt="image 2" />
               </Card>
               <Card>
                 <h3 className="text-white p-7 ">Building Clone of Chat GPT</h3>

@@ -88,6 +88,18 @@ export function SmoothCursor({
   },
 }: SmoothCursorProps) {
   const [isMoving, setIsMoving] = useState(false)
+
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    const isTouch =
+      ("ontouchstart" in window) || navigator.maxTouchPoints > 0;
+
+    if (isTouch) {
+      setShowCursor(false);
+    }
+  }, []);
+
   const lastMousePos = useRef<Position>({ x: 0, y: 0 })
   const velocity = useRef<Position>({ x: 0, y: 0 })
   const lastUpdateTime = useRef(Date.now())
@@ -178,6 +190,8 @@ export function SmoothCursor({
     }
   }, [cursorX, cursorY, rotation, scale])
 
+  if (!showCursor) return null;
+
   return (
     <motion.div
       style={{
@@ -202,5 +216,5 @@ export function SmoothCursor({
     >
       {cursor}
     </motion.div>
-  )
+  );
 }
