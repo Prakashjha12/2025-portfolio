@@ -103,7 +103,7 @@ const Projects = () => {
             scaleOnHover
             fadeOut
             fadeOutColor="#ffffff"
-            ariaLabel="Technology partners"
+            ariaLabel="Technology "
           />
         </div>
       </div>
@@ -114,7 +114,7 @@ const Projects = () => {
         projects
       </h4>
 
-      <div className="flex flex-col md:flex-row gap-8 w-full">
+      <div className="flex flex-col md:flex-row gap-0 md:gap-8 w-full">
         {/* Project list */}
         <div id="left" className="relative flex-1">
           <div
@@ -131,9 +131,9 @@ const Projects = () => {
         </div>
 
         {/* Card swapper */}
-        <div id="right">
+        <div id="right" className="-mt-42 md:mt-0">
           <div
-            className="w-full max-w-md"
+            className="w-full max-w-md "
             style={{ height: "400px", position: "relative" }}
           >
             <CardSwap

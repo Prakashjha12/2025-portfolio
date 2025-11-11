@@ -3,7 +3,7 @@ import CurvedLoop from "./CurvedLoop";
 import StickyFooter from "./ui/StickyFooter";
 const Footer = () => {
   return (
-    <div className="relative w-full h-[60vh]">
+    <div className="relative w-full h-[60vh] mt-28 ">
       <div className="relative z-10 ">
         <CurvedLoop
           marqueeText="Footer in 2025? 💀

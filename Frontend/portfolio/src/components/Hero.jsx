@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { Badge } from "@/components/ui/badge";
 import { BorderBeam } from "@/components/ui/border-beam";
+
 const Hero = () => {
   useEffect(() => {
     document.fonts.ready.then(() => {
@@ -41,7 +42,7 @@ const Hero = () => {
 
   return (
     <div id="home">
-      <div className="main min-h-[95vh]  flex flex-col gap-5 ml-10 items-center justify-center ">
+      <div className="main min-h-[95vh]  flex flex-col gap-5 items-center justify-center ">
         <div id="green-dot" className="flex items-center gap-2 ">
           <div
             id="green"
@@ -52,19 +53,19 @@ const Hero = () => {
           </div>
         </div>
         <div id="hero-text">
-          <h1 className="text-slate-900 mb-10 md:text-6xl mt-6 font-[roboto2] tracking-tighter dark:text-white sm:text-3xl text-center   ">
+          <h1 className="text-slate-900 mb-10 text-3xl sm:text-4xl md:text-6xl mt-6 font-[roboto2] tracking-tighter dark:text-white text-center">
             Full-stack Developer
           </h1>
           <p
             id="hero-text-para"
-            className=" text-slate-600 max-w-2xl leading-6 font-[roboto2] tracking-wider  text-sm dark:text-white  text-center mb-10 sm:"
+            className="text-slate-600 text-sm sm:text-xs md:text-base max-w-2xl leading-6 font-[roboto2] tracking-wider dark:text-white text-center mb-10"
           >
             Building elegant digital experiences with modern web technologies.
             Specialized in React, Node.js, and scalable cloud architecture.
           </p>
         </div>
-        <div className="flex gap-10">
-          <div id="cta" className=" font- flex gap-10">
+        <div className="flex   sm:gap-1  text-2xl ">
+          <div id="cta" className="  flex gap-5">
             <a href="#form">
               {" "}
               <Button variant="outline">Get in Touch</Button>
@@ -74,7 +75,11 @@ const Hero = () => {
             </a>
           </div>
           <div
-            style={{ height: "10px", position: "relative", marginTop: "-23px" }}
+            style={{
+              height: "10px",
+              position: "relative",
+              marginTop: "-23px",
+            }}
           >
             {/* Pass three paper items: GitHub, LinkedIn, and X (Twitter) */}
             <Folder

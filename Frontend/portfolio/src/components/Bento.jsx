@@ -3,6 +3,7 @@ import MagicBento from "./MagicBento";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
+import GooeyDemo from "./ui/gooey-svg-file";
 gsap.registerPlugin(ScrollTrigger);
 
 const Cards = () => {
@@ -28,24 +29,35 @@ const Cards = () => {
   return (
     <div
       id="bentoo"
-      className=" mt-18 h-full w-full flex items-center justify-center flex-col"
+      className="h-full w-full flex items-center justify-center  flex-col p-2"
     >
-      <h3 id="text" className=" text-4xl  font-[roboto] uppercase opacity-0">
+      <h3
+        id="text"
+        className=" sm:mb-30 text-4xl  font-[roboto] uppercase opacity-0 "
+      >
         experiences
       </h3>
-      <div id="bento,about" className="h-full w-[60vw] mt-16  col-auto ">
-        <MagicBento
-          textAutoHide={true}
-          enableStars={true}
-          enableSpotlight={true}
-          enableBorderGlow={true}
-          enableTilt={false}
-          enableMagnetism={true}
-          clickEffect={true}
-          spotlightRadius={400}
-          particleCount={12}
-          glowColor="132, 0, 255"
-        />
+      <div className="w-full flex flex-col md:flex-row items-start justify-center gap-6">
+        <div
+          id="bento,about"
+          className="h-full w-full md:w-1/2 flex justify-center items-center "
+        >
+          <MagicBento
+            textAutoHide={true}
+            enableStars={true}
+            enableSpotlight={true}
+            enableBorderGlow={true}
+            enableTilt={false}
+            enableMagnetism={true}
+            clickEffect={true}
+            spotlightRadius={400}
+            particleCount={12}
+            glowColor="132, 0, 255"
+          />
+        </div>
+        <div className=" mb-20  h-full w-full md:w-1/2 flex justify-center  ">
+          <GooeyDemo />
+        </div>
       </div>
     </div>
   );

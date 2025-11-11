@@ -3,13 +3,13 @@ import { WarpBackground } from "@/components/ui/warp-background"
 
 const Preview: React.FC = () => {
   return (
-    <div className="w-full bg-[#bc9c9c] items-center justify-center h-full overflow-auto">
-      {/* add relative positioning to the main conent */}
-      <div className="relative w-dvw h-dvh z-10 text-2xl md:text-7xl font-bold uppercase flex justify-center items-center bg-white dark:bg-black text-white whitespace-pre">
+    <div className="w-full bg-[#bc9c9c00] -mt-28  items-center justify-center h-60 ">
+
+      <div className="relative w-dvw h-dvh z-10 text-2xl md:text-7xl font-bold uppercase flex justify-center items-center bg-white dark:bg-black text-white whitespace-pre ">
          <WarpBackground>
-         <div className="w-60 h-60">
-         <p className="text-black text-center text-sm">Scroll Down</p>
-         {/* <p>This is a component that creates a warp background effect.</p> */}
+         <div className="w-50 h-50 md:w-100 md:h-100   ">
+         <p className="text-black text-center text-sm dark:text-white">Scroll Down</p>
+         
            </div>
 </WarpBackground>
       </div>

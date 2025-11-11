@@ -163,7 +163,7 @@ const Folder = ({
               !open ? "group-hover:[transform:skew(15deg)_scaleY(0.6)]" : ""
             }`}
             style={{
-              backgroundColor: color,
+              backgroundColor: isDark ? "#FFFFFF" : color,
               borderRadius: "5px 10px 10px 10px",
               ...(open && { transform: "skew(15deg) scaleY(0.6)" }),
             }}
@@ -173,7 +173,7 @@ const Folder = ({
               !open ? "group-hover:[transform:skew(-15deg)_scaleY(0.6)]" : ""
             }`}
             style={{
-              backgroundColor: color,
+              backgroundColor: isDark ? "#FFFFFF" : color,
               borderRadius: "5px 10px 10px 10px",
               ...(open && { transform: "skew(-15deg) scaleY(0.6)" }),
             }}
