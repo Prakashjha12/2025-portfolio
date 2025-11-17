@@ -38,7 +38,7 @@ const Folder = ({
     Array.from({ length: maxItems }, () => ({ x: 0, y: 0 }))
   );
 
-  const folderBackColor = darkenColor(color, 0.08);
+  const folderBackColor = darkenColor(color, 0.9);
   // Light mode: white papers; Dark mode: dimmed papers for logo contrast
   const isDark =
     typeof window !== "undefined" &&
@@ -163,7 +163,7 @@ const Folder = ({
               !open ? "group-hover:[transform:skew(15deg)_scaleY(0.6)]" : ""
             }`}
             style={{
-              backgroundColor: isDark ? "#FFFFFF" : color,
+              backgroundColor: isDark ? "#242424" : color,
               borderRadius: "5px 10px 10px 10px",
               ...(open && { transform: "skew(15deg) scaleY(0.6)" }),
             }}
@@ -173,7 +173,7 @@ const Folder = ({
               !open ? "group-hover:[transform:skew(-15deg)_scaleY(0.6)]" : ""
             }`}
             style={{
-              backgroundColor: isDark ? "#FFFFFF" : color,
+              backgroundColor: isDark ? "#242424" : color,
               borderRadius: "5px 10px 10px 10px",
               ...(open && { transform: "skew(-15deg) scaleY(0.6)" }),
             }}
