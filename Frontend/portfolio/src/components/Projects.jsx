@@ -143,7 +143,7 @@ const Projects = () => {
               pauseOnHover={false}
             >
               <Card>
-                <h3 className="text-white p-7 ">AI mood detector </h3>
+                <h3 className="text-white p-7 ">AI Mood-Based Music Player </h3>
                 <p className="text-white text-2xl text-center">
                   Play song according to your mood
                 </p>
@@ -157,8 +157,8 @@ const Projects = () => {
                 <img src="/assets/MKBHD.png" alt="image 2" />
               </Card>
               <Card>
-                <h3 className="text-white p-7 ">Building Clone of Chat GPT</h3>
-                <p className=" text-white text-4xl sm:text-6xl text-center">
+                <h3 className="text-white p-7 ">ChatGPT Clone</h3>
+                <p className=" text-white text-2xl text-center">
                   Coming soon
                 </p>
                 {/* <img src="" alt="" /> */}

@@ -12,6 +12,12 @@ select {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 25vh; /* roughly centers it */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 @custom-variant dark (&:is(.dark *));

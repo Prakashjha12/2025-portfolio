@@ -81,7 +81,7 @@ export const App = () => {
       <div className="fixed inset-0 -z-10">
         <FireworksBackground
           color={"silver"}
-          population={0.1}
+          population={0.05}
           fireworkSpeed={2}
         />
       </div>

@@ -9,46 +9,46 @@ const TAB_CONTENT = [
   {
     title: "2025",
     files: [
-      "learning-to-meditate.md",
-      "spring-garden-plans.md",
-      "travel-wishlist.md",
-      "new-coding-projects.md",
+      "mastering-nextjs-15.md",
+      "ai-driven-applications.tsx",
+      "scalable-cloud-architecture.pdf",
+      "contributing-to-open-source.md",
     ],
   },
   {
     title: "2024",
     files: [
-      "learning-to-meditate.md",
-      "spring-garden-plans.md",
-      "travel-wishlist.md",
-      "new-coding-projects.md",
+      "building-achar-aangan.ts",
+      "advanced-react-patterns.md",
+      "backend-optimization-nodejs.js",
+      "integrating-payment-gateways.json",
     ],
   },
   {
     title: "2023",
     files: [
-      "year-in-review.md",
-      "marathon-training-log.md",
-      "recipe-collection.md",
-      "book-reflections.md",
+      "mastering-javascript-es6.js",
+      "first-hackathon-experience.md",
+      "learning-mongodb-aggregation.json",
+      "responsive-ui-design.css",
     ],
   },
   {
     title: "2022",
     files: [
-      "moving-to-a-new-city.md",
-      "starting-a-blog.md",
-      "photography-basics.md",
-      "first-coding-project.md",
+      "hello-world.html",
+      "css-grid-and-flexbox.css",
+      "starting-web-development.md",
+      "my-first-portfolio.html",
     ],
   },
   {
     title: "2021",
     files: [
-      "goals-and-aspirations.md",
-      "daily-gratitude.md",
-      "learning-to-cook.md",
-      "remote-work-journal.md",
+      "exploring-tech-landscape.md",
+      "problem-solving-basics.py",
+      "algorithm-challenges.cpp",
+      "tech-community-engagement.md",
     ],
   },
 ]
@@ -60,7 +60,7 @@ export default function GooeyDemo() {
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 
   return (
-    <div className="relative w-full h-full flex justify-center p-8 font-calendas md:text-base text-xs sm:text-sm bg-white dark:bg-black">
+    <div className="relative w-full h-full flex justify-center  font-calendas md:text-base text-xs sm:text-sm bg-white dark:bg-black">
       <GooeySvgFilter
         id="gooey-filter"
         strength={isMobile ? 8 : 15}

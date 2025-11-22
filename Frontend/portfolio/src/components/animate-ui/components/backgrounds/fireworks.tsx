@@ -256,25 +256,27 @@ function FireworksBackground({
     };
 
     const launchFirework = () => {
-      const x = rand(maxX * 0.1, maxX * 0.9);
-      const y = maxY;
-      const targetY = rand(maxY * 0.1, maxY * 0.4);
-      const fireworkColor = getColor(color);
-      const speed = getValueByRange(fireworkSpeed);
-      const size = getValueByRange(fireworkSize);
-      fireworks.push(
-        createFirework(
-          x,
-          y,
-          targetY,
-          fireworkColor,
-          speed,
-          size,
-          particleSpeed,
-          particleSize,
-          handleExplosion,
-        ),
-      );
+      if (!document.hidden) {
+        const x = rand(maxX * 0.1, maxX * 0.9);
+        const y = maxY;
+        const targetY = rand(maxY * 0.1, maxY * 0.4);
+        const fireworkColor = getColor(color);
+        const speed = getValueByRange(fireworkSpeed);
+        const size = getValueByRange(fireworkSize);
+        fireworks.push(
+          createFirework(
+            x,
+            y,
+            targetY,
+            fireworkColor,
+            speed,
+            size,
+            particleSpeed,
+            particleSize,
+            handleExplosion,
+          ),
+        );
+      }
       const timeout = rand(300, 800) / population;
       setTimeout(launchFirework, timeout);
     };
