@@ -29,7 +29,7 @@ const Cards = () => {
   return (
     <div
       id="bentoo"
-      className="h-full w-full flex items-center justify-center  flex-col pr-20"
+      className="h-full w-full flex items-center justify-center  flex-col  md:pr-20"
     >
       <h3
         id="text"
