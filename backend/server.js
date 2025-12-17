@@ -41,14 +41,12 @@ const formSchema = new mongoose.Schema({
 });
 const Form = mongoose.model("form", formSchema);
 
-// ✅ POST route
 app.post("/api/submit-form", async (req, res) => {
   try {
-    console.log("Incoming data:", req.body); // log what’s being sent
+    console.log("Incoming data:", req.body);
 
     const { name, email, message } = req.body;
 
-    // Check if any field is missing
     if (!name || !email || !message) {
       return res.status(400).json({ message: "All fields are required!" });
     }

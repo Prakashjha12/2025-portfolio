@@ -1,18 +1,20 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 
 import Hero from "./components/Hero";
-import Projects from "./components/Projects";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import CardNav from "./components/CardNav";
-import Cards from "./components/Bento";
-import Form from "./components/Form";
 import ClickSpark from "./components/ClickSpark";
-import Footer from "./components/Footer";
 import { FireworksBackground } from "./components/animate-ui/components/backgrounds/fireworks";
 import { SmoothCursor } from "./components/ui/smooth-cursor";
 import { Toaster } from "sonner";
+import { href } from "react-router-dom";
+
+const Projects = lazy(() => import("./components/Projects"));
+const Cards = lazy(() => import("./components/Bento"));
+const Form = lazy(() => import("./components/Form"));
+const Footer = lazy(() => import("./components/Footer"));
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -26,12 +28,12 @@ export const App = () => {
         {
           label: "My Journey",
           ariaLabel: "Learn about my developer journey",
-          url: "#about",
+          href: "#about",
         },
         {
           label: "Skills",
           ariaLabel: "Explore my tech stack and expertise",
-          url: "#skills",
+          href: "#skills",
         },
       ],
     },
@@ -43,7 +45,7 @@ export const App = () => {
         {
           label: "Featured Work",
           ariaLabel: "View my featured projects",
-          url: "#projects",
+          // href: "projects",
         },
         {
           label: "Case Studies",
@@ -60,17 +62,17 @@ export const App = () => {
         {
           label: "Email",
           ariaLabel: "Send me an email",
-          url: "mailto:prakash@example.com",
+          href: "mailto:hello@prakashjha.com",
         },
         {
           label: "GitHub",
           ariaLabel: "Visit my GitHub profile",
-          url: "https://github.com/Prakashjha12",
+          href: "https://github.com/Prakashjha12",
         },
         {
           label: "LinkedIn",
           ariaLabel: "Connect with me on LinkedIn",
-          url: "https://linkedin.com/in/prakashjha",
+          href: "https://www.linkedin.com/in/itscoderthisside/",
         },
       ],
     },
@@ -102,10 +104,12 @@ export const App = () => {
         />
 
         <Hero />
-        <Projects />
-        <Cards />
-        <Form />
-        <Footer />
+        <Suspense fallback={<div className="min-h-screen"></div>}>
+          <Projects />
+          <Cards />
+          <Form />
+          <Footer />
+        </Suspense>
         <Toaster position="bottom-right" />
       </ClickSpark>
     </div>

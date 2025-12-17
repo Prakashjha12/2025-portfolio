@@ -121,7 +121,7 @@ const Projects = () => {
             id="project-section"
             className="md:ml-20 mt-4 md:mt-44 text-2xl sm:text-4xl md:text-4xl font-[roboto2] leading-tight "
           >
-            <h3>AI Player According to face </h3>
+            <h3 id="#projects">AI Player According to face </h3>
             <h3>E-commerce Website</h3>
             <h3>
               Chat Gpt clone{" "}
@@ -131,7 +131,7 @@ const Projects = () => {
         </div>
 
         {/* Card swapper */}
-        <div id="right" className="-mt-42 md:mt-0">
+        <div id="right" className="-mt-42 md:mt-0 p-20">
           <div
             className="w-full max-w-md "
             style={{ height: "400px", position: "relative" }}
@@ -142,25 +142,44 @@ const Projects = () => {
               delay={5000}
               pauseOnHover={false}
             >
-              <Card>
+              <Card className="overflow-hidden">
                 <h3 className="text-white p-7 ">AI Mood-Based Music Player </h3>
                 <p className="text-white text-2xl text-center">
                   Play song according to your mood
                 </p>
-                <img src="/assets/image 1 mood detector.png" alt="image 1" />
+                <a
+                  href="https://github.com/Prakashjha12/Moody-player"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assets/image 1 mood detector.png"
+                    alt="AI Mood-Based Music Player project screenshot"
+                    loading="lazy"
+                  />
+                </a>
               </Card>
-              <Card>
+              <Card className="overflow-hidden">
                 <h3 className="text-white p-7 ">MKBHD E-commerce Website</h3>
                 <p className=" text-white text-2xl text-center">
                   For a hackthone I built a MKBHD(Youtuber) Merchandise Website
                 </p>
-                <img src="/assets/MKBHD.png" alt="image 2" />
+                <a
+                  href="https://github.com/Prakashjha12/MKBHD"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {" "}
+                  <img
+                    src="/assets/MKBHD.png"
+                    alt="MKBHD E-commerce Website project screenshot"
+                    loading="lazy"
+                  />
+                </a>
               </Card>
               <Card>
                 <h3 className="text-white p-7 ">ChatGPT Clone</h3>
-                <p className=" text-white text-2xl text-center">
-                  Coming soon
-                </p>
+                <p className=" text-white text-2xl text-center">Coming soon</p>
                 {/* <img src="" alt="" /> */}
               </Card>
             </CardSwap>

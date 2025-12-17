@@ -29,7 +29,7 @@ const Cards = () => {
   return (
     <div
       id="bentoo"
-      className="h-full w-full flex items-center justify-center  flex-col p-2"
+      className="h-full w-full flex items-center justify-center  flex-col pr-20"
     >
       <h3
         id="text"
@@ -37,7 +37,10 @@ const Cards = () => {
       >
         experiences
       </h3>
-      <div className="w-full flex flex-col md:flex-row items-start justify-center gap-6">
+      <div
+        id="skills"
+        className="w-full flex flex-col md:flex-row items-start justify-center gap-2"
+      >
         <div
           id="bento,about"
           className="h-full w-full md:w-1/2 flex justify-center items-center "
@@ -55,7 +58,10 @@ const Cards = () => {
             glowColor="132, 0, 255"
           />
         </div>
-        <div className=" mb-20  h-full w-full md:w-1/2 flex justify-center  ">
+        <div
+          id="about"
+          className=" mb-20  h-full w-full md:w-1/2 flex justify-center   "
+        >
           <GooeyDemo />
         </div>
       </div>
