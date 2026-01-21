@@ -74,6 +74,11 @@ export const App = () => {
           ariaLabel: "Connect with me on LinkedIn",
           href: "https://www.linkedin.com/in/itscoderthisside/",
         },
+        {
+          label: "Blogs",
+          ariaLabel: "Read the Blogs here",
+          href: "https://blogs.prakashjha.com/",
+        },
       ],
     },
   ];

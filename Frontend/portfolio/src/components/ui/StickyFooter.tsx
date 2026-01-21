@@ -42,8 +42,13 @@ const Preview: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="https://x.com/itsadeveloper" target="_blank" rel="noopener noreferrer" className="hover:underline cursor-pointer">
+                <a href="https://x.com/i_am_prakashjha" target="_blank" rel="noopener noreferrer" className="hover:underline cursor-pointer">
                   X (Twitter)
+                </a>
+              </li>
+               <li>
+                <a href="https://blogs.prakashjha.com/" target="_blank" rel="noopener noreferrer" className="hover:underline cursor-pointer">
+                  Blogs
                 </a>
               </li>
             </ul>
