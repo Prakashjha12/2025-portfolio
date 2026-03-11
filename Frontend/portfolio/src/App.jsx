@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-
+import { useEffect } from 'react';
 import Hero from "./components/Hero";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,10 +15,23 @@ const Projects = lazy(() => import("./components/Projects"));
 const Cards = lazy(() => import("./components/Bento"));
 const Form = lazy(() => import("./components/Form"));
 const Footer = lazy(() => import("./components/Footer"));
+const API_BASE_URL = "https://simple-elegent.onrender.com";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+
+
 export const App = () => {
+  useEffect(() => {
+    const wakeUpBackend = async () => {
+      try {
+        await fetch(`${API_BASE_URL}/`, { mode: 'no-cors'});
+      } catch (error) {
+      }
+    };
+
+    wakeUpBackend();
+  }, []);
   const items = [
     {
       label: "About Me",

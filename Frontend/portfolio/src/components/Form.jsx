@@ -42,7 +42,7 @@ export default function MyForm() {
     const sanitizedValues = {
     name: values.name.trim(),
     email: values.email.trim(),
-
+    message: values.message.trim(),
   };
     const toastId = toast.loading("Submitting...", {
       position: "bottom-right",
