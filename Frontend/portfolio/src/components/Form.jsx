@@ -21,9 +21,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 
 const formSchema = z.object({
-  name: z.string().min(1, { message: "Name is required." }),
-  email: z.string().email({ message: "Enter a valid email address." }),
-  message: z.string().min(5, { message: "Please enter your message." }),
+  name: z.string().trim().min(3, { message: "Name is required." }),
+  email: z.string().trim().email({ message: "Enter a valid email address." }),
+  message: z.string().trim().min(5, { message: "Please enter your message." }),
 });
 
 export default function MyForm() {
@@ -39,6 +39,11 @@ export default function MyForm() {
 
   async function onSubmit(values) {
     setIsSubmitting(true);
+    const sanitizedValues = {
+    name: values.name.trim(),
+    email: values.email.trim(),
+
+  };
     const toastId = toast.loading("Submitting...", {
       position: "bottom-right",
     });
@@ -48,7 +53,7 @@ export default function MyForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(values),
+        body: JSON.stringify(sanitizedValues),
       });
 
       if (res.ok) {

@@ -6,7 +6,7 @@ dotenv.config();
 
 const app = express();
 
-// ✅ Enable JSON body parsing
+
 app.use(express.json());
 
 // ✅ CORS setup (frontend → backend)
